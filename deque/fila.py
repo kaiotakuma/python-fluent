@@ -7,14 +7,16 @@ class Fila:
         self.lista = deque()
 
     def insert(self, val):
+        # insere no final da lista
         self.lista.append(val)
 
     def remove(self):
+        # remove o primeiro, guarda o valor
         return self.lista.popleft()
 
     def __repr__(self):
         lista_elementos = [str(elemento) for elemento in self.lista]
-        elementos_str = ";-;".join(lista_elementos)
+        elementos_str = " ".join(lista_elementos)
         return f'Fila [{elementos_str}]'
 
 queue = Fila()
@@ -24,7 +26,7 @@ queue.insert('Godofre(lu) - 3')
 print(queue)
 
 a = queue.remove()
-print('a = ',a)
+print('a = ', a)
 print(queue)
 
 # # Cria uma instância de uma fila (queue) FIFO (First-In-First-Out)
